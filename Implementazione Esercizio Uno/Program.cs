@@ -135,7 +135,7 @@ namespace Implementazione_Esercizio_Uno
             Console.Clear();    //reset della console
             do                  //ciclo do while che verifica se ripetere il programma o chiuderlo
             {
-                Console.WriteLine("Inserire la lettera associata alla funzione per selezionarla: \r\na - Aggiungere un elemento in coda all'array\r\nv - Visualizzare l'array che restituisca la stringa in HTML\r\nr - Ricerca un numero all'interno dell'array\r\nc - Cancellazione di un elemento nell'array\r\ni - Inserimento di un valore in una posizione dell'array\r\ns - Stampa dell'array aggiornato\r\nf - Inserire numeri dal file\r\nn - Nuovi numeri random\r\no - Aggiungere un elemento nell'array e ordinarlo\r\nu - Uscita dal programma"); //output delle indicazioni
+                Console.WriteLine("Inserire la lettera associata alla funzione per selezionarla: \r\na - Aggiungere un elemento in coda all'array\r\nv - Visualizzare l'array che restituisca la stringa in HTML\r\nr - Ricerca un numero all'interno dell'array\r\nc - Cancellazione di un elemento nell'array\r\ni - Inserimento di un valore in una posizione dell'array\r\ns - Stampa dell'array aggiornato\r\nf - Inserire numeri dal file\r\nn - Nuovi numeri random\r\no - Aggiungere un elemento nell'array e ordinarlo\r\nt - Troncare l'array\r\nu - Uscita dal programma"); //output delle indicazioni
                 switch (Console.ReadLine())         //switch che verifica l'input ricevuto
                 {
                     case "a":
@@ -216,7 +216,9 @@ namespace Implementazione_Esercizio_Uno
                         }
                         break;
                     case "t":
-
+                        Console.WriteLine("A quanto vuoi troncare l'array?");
+                        int tronc = int.Parse(Console.ReadLine());
+                        arr1 = new int[tronc];
                         break;
                     case "o":
                         Console.WriteLine("Che numero vuoi inserire?");
